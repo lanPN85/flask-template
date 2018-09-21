@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+  app-main:
+    build: .
+    image: flask-template:0.1
+    volumes:
+      - type: bind
+        target: /app/logs
+        source: ./logs
+      - type: bind
+        target: /app/configs
+        source: ./configs
+    ports:
+      - 5000:5000
