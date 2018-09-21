@@ -1,0 +1,8 @@
+# IDE settings
+.idea/
+.vscode/
+**/*~
+
+# Cache files
+**/*.pyc
+*.sock
