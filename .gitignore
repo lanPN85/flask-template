@@ -1,8 +1,12 @@
 # IDE settings
 .idea/
 .vscode/
+venv/
 **/*~
 
 # Cache files
 **/*.pyc
 *.sock
+
+# Others
+*.tar.gz

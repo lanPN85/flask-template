@@ -11,14 +11,9 @@ ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 
 # Python dependencies
-WORKDIR /app
-ADD Pipfile Pipfile.lock /app/
-RUN pipenv install --deploy --system
+ADD requirements.txt /app/
+RUN pip3 install -r requirements.txt
 
-# Alternatively, use regular old pip
-# ADD requirements.txt /app/
-# RUN pip3 install -r requirements.txt
-
-ADD . /app
+COPY . /app
 EXPOSE 5000
-CMD python3 app.py
+CMD gunicorn --config configs/gunicorn.py app:app

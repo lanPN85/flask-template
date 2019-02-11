@@ -1,0 +1,6 @@
+DEBUG = True
+ENV = 'development'
+
+JWT_SECRET_KEY = 'abc123'
+JWT_ACCESS_TOKEN_EXPIRES = False
+JWT_REFRESH_TOKEN_EXPIRES = False
